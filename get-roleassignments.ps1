@@ -55,8 +55,8 @@ while ($termLoop -ne 0 ) {
     write-host "##                                                                                                                    ##" -ForegroundColor Cyan
     write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "1. " -ForegroundColor blue -NoNewline; write-host "Get Role Assignments for a Subscription" -NoNewLine -ForegroundColor white; write-host "                                                                        ##" -ForegroundColor Cyan
     write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "2. " -ForegroundColor blue -NoNewline; write-host "Get Role Assignments for a Management Group" -NoNewLine -ForegroundColor white; write-host "                                                                    ##" -ForegroundColor Cyan
-    write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "3. " -ForegroundColor blue -NoNewline; write-host "Get Role Assignments for a User" -NoNewLine -ForegroundColor white; write-host "                                                                                ##" -ForegroundColor Cyan
-    write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "4. " -ForegroundColor blue -NoNewline; write-host "Get full tenant audit" -NoNewLine -ForegroundColor white; write-host "                                                                                          ##" -ForegroundColor Cyan
+    #write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "3. " -ForegroundColor blue -NoNewline; write-host "Get Role Assignments for a User" -NoNewLine -ForegroundColor white; write-host "                                                                                ##" -ForegroundColor Cyan
+    #write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "4. " -ForegroundColor blue -NoNewline; write-host "Get full tenant audit" -NoNewLine -ForegroundColor white; write-host "                                                                                          ##" -ForegroundColor Cyan
     write-host "##                                                                                                                    ##" -ForegroundColor Cyan
     write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "9. " -ForegroundColor blue -NoNewline; write-host "Choose new Tenant and/or Subscription" -NoNewLine -ForegroundColor white; write-host "                                                                          ##" -ForegroundColor Cyan
     #write-host "##  " -ForegroundColor Cyan -NoNewline; write-host "9. " -ForegroundColor yellow -NoNewline; write-host "Create/Update Dictionaries" -NoNewLine -ForegroundColor white; write-host "                                                                                     ##" -ForegroundColor Cyan
@@ -207,7 +207,8 @@ while ($termLoop -ne 0 ) {
 }
 
 ## Graceful exit - termloop
-Write-Host "Bye!" -ForegroundColor Green
+clear-host
+write-host "Exiting..." -ForegroundColor Green
 Start-Sleep -Seconds 1
 Clear-Host
 exit

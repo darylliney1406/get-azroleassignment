@@ -304,7 +304,7 @@ function get-all-sub {
         $progressCounter++
 
         # Show progress
-        Write-Progress -Activity "Fetching Role Assignments" -Status "Processing subscription $($sub.Name)" -PercentComplete (($progressCounter / $subCount) * 100)
+        Write-Progress -Activity "Fetching Role Assignments" -Status "Processing subscription $($sub.Name)($($progressCounter) of $($subCount))" -PercentComplete (($progressCounter / $subCount) * 100)
         
         # Get role assignments for each management group
         $subRoleAssignments = Get-AzRoleAssignment -Scope "/subscriptions/$($sub.Id)"
