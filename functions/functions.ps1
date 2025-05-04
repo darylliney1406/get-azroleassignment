@@ -282,24 +282,36 @@ function get-all-sub {
         [string]$tenantId
     )
 
-    # Get all subscriptions
+    # Get all subscriptions associated to signed in tenant
     $subscriptions = Get-AzSubscription | Where-Object { $_.TenantId -eq $tenantId }
 
+    # Set count variable
+    $subCount = $subscriptions.Count
+    $progressCounter = 0
+    write-host "You have $subCount subscriptions in your tenant" -ForegroundColor Yellow
+
+    # Create a unique filename for the CSV
     $prepend = "all-sub"
     $uniqueFilename = get-date -format "ddMMyyyyHHmmss" 
+    $outputPath = ".\outputs"
+    $csvPath = "$outputPath\$prepend-$uniqueFilename.csv"
 
+    # Initialize an array to store role assignments
     $subRoleAssignments = @()
 
     # Iterate through all subscriptions
     foreach ($sub in $subscriptions) {
+        $progressCounter++
+
+        # Show progress
+        Write-Progress -Activity "Fetching Role Assignments" -Status "Processing subscription $($sub.Name)" -PercentComplete (($progressCounter / $subCount) * 100)
+        
         # Get role assignments for each management group
-        $subRoleAssignments += $subRoleAssignments = Get-AzRoleAssignment -Scope "/subscriptions/$($sub.Id)"
+        $subRoleAssignments = Get-AzRoleAssignment -Scope "/subscriptions/$($sub.Id)"
 
         # Iterate output, export to CSV and display in console
-        foreach ($subRoleAssignment in $subRoleAssignments) {
-            $subRoleAssignment | Select-Object -Property DisplayName, ObjectType, RoleDefinitionName, Scope | Export-Csv -Path "..\list-azure-role-assignments\outputs\$prepend-$uniqueFilename.csv" -append -NoTypeInformation
-            $subRoleAssignment | format-table -Property DisplayName, ObjectType, RoleDefinitionName, Scope
-        }
+        $subRoleAssignments | Select-Object -Property DisplayName, ObjectId, ObjectType, RoleDefinitionName, Scope | Export-Csv -Path $csvPath -append -NoTypeInformation
+
     }
 }
 
