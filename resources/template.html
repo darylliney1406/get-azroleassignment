@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #f5f5f5;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(240, 240, 240, 0.5) 50%, rgba(208, 208, 208, 0.5) 50%);
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000x;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px auto;
+            align-items: left;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: left;
+            padding-bottom: 10px;
+        }
+
+        .card-header .md-icon {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+
+        }
+
+        .card-header .sm-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+
+        }
+
+        .card-header .header-variable {
+            font-size: 1.4em;
+            font-weight: bold;
+
+        }
+
+        .card-header .other-variable {
+            font-size: 1.0em;
+            font-weight: normal;
+
+        }
+
+        .card-content {
+            margin-top: 15px;
+            font-size: 1em;
+        }
+
+        .card-buttons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .card-buttons button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0078d4;
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-buttons button:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">
+            <img src="Managed-Identities.svg" alt="Icon" class="md-icon">
+            <span class="header-variable">Placeholder for managed identities</span>
+        </div>
+
+        <div class="card-header">
+            <img src="Management-Groups.svg" alt="Icon" class="sm-icon">
+            <span class="other-variable">Placeholder for management groups</span>
+        </div>
+
+        <div class="card-header">
+            <img src="subscriptions.svg" alt="Icon" class="sm-icon">
+            <span class="other-variable">Placeholder for subscriptions</span>
+        </div>
+
+        <div class="card-header">
+            <img src="users.svg" alt="Icon" class="sm-icon">
+            <span class="other-variable">Placeholder for users</span>
+        </div>
+
+        <div class="card-header">
+            <img src="role.svg" alt="Icon" class="sm-icon">
+            <span class="other-variable">Placeholder for roles</span>
+        </div>
+
+        <div class="card-content">
+            Placeholder for additional information
+        </div>
+
+        <div class="card-buttons">
+            <button>Remove assignment</button>
+            <button>Do something else</button>
+        </div>
+    </div>
+</body>
+
+</html>
