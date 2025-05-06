@@ -1,0 +1,620 @@
+**********************
+PowerShell transcript start
+Start time: 20250505211237
+Username: MAC-FV30GGW7X3\darylliney
+RunAs User: MAC-FV30GGW7X3\darylliney
+Configuration Name: 
+Machine: MAC-FV30GGW7X3 (Unix 15.4.1)
+Host Application: /opt/homebrew/Cellar/powershell/7.4.6/libexec/pwsh.dll -noexit -command . "/Applications/Visual Studio Code.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration.ps1"
+Process ID: 40890
+PSVersion: 7.4.6
+PSEdition: Core
+GitCommitId: 7.4.6
+OS: Darwin 24.4.0 Darwin Kernel Version 24.4.0: Fri Apr 11 18:33:47 PDT 2025; root:xnu-11417.101.15~117/RELEASE_ARM64_T6000
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\logs\role-assignments.log
+Locating and loading required functions... Please wait
+Functions have been found. Continuing...
+Checking Az CLI and PowerShell prereqs... Please wait
+Azure PowerShell module is installed. Continuing...
+
+You are connected to Azure Tenant: Subwave. Do you want to change?
+
+Prereqs complete. Starting...
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Get role assignments for a Subscription
+***************************************
+
+You are connected to Subscription:
+dlineyAzureTraining
+
+To search
+dlineyAzureTraining
+ press
+ enter
+To search
+all
+ Subscriptions, enter
+ 'all'
+
+If you would like to search a different subscription, exit to main menu by entering
+ '0'
+ and select option
+ 9
+
+To exit back to main menu enter
+ '0'
+
+WARNING: Unable to acquire token for tenant 'ace2b027-9ecd-4244-aad8-0422e2c8f6f8' with error 'Authentication failed against tenant ace2b027-9ecd-4244-aad8-0422e2c8f6f8. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId ace2b027-9ecd-4244-aad8-0422e2c8f6f8'.'
+WARNING: Unable to acquire token for tenant 'b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6' with error 'Authentication failed against tenant b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6'.'
+You have 3 subscriptions in your tenant (not including subscriptions you do not have access to)
+.\outputs\all-sub-05052025211251-expanded.csv
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+PS>./get-roleassignments.ps1
+Transcript started, output file is .\logs\role-assignments.log
+Locating and loading required functions... Please wait
+Functions have been found. Continuing...
+Checking Az CLI and PowerShell prereqs... Please wait
+Azure PowerShell module is installed. Continuing...
+
+You are connected to Azure Tenant: Subwave. Do you want to change?
+
+Prereqs complete. Starting...
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Get role assignments for a Subscription
+***************************************
+
+You are connected to Subscription:
+dlineyAzureTraining
+
+To search
+dlineyAzureTraining
+ press
+ enter
+To search
+all
+ Subscriptions, enter
+ 'all'
+
+If you would like to search a different subscription, exit to main menu by entering
+ '0'
+ and select option
+ 9
+
+To exit back to main menu enter
+ '0'
+
+WARNING: Unable to acquire token for tenant 'ace2b027-9ecd-4244-aad8-0422e2c8f6f8' with error 'Authentication failed against tenant ace2b027-9ecd-4244-aad8-0422e2c8f6f8. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId ace2b027-9ecd-4244-aad8-0422e2c8f6f8'.'
+WARNING: Unable to acquire token for tenant 'b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6' with error 'Authentication failed against tenant b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6'.'
+You have 3 subscriptions in your tenant (not including subscriptions you do not have access to)
+PS>TerminatingError(): "Method invocation failed because [System.Management.Automation.PSObject] does not contain a method named 'op_Addition'."
+>> TerminatingError(): "Method invocation failed because [System.Management.Automation.PSObject] does not contain a method named 'op_Addition'."
+>> TerminatingError(): "Method invocation failed because [System.Management.Automation.PSObject] does not contain a method named 'op_Addition'."
+An error occurred. Check logs at './logs/role-assignments.log' for more info
+Method invocation failed because [System.Management.Automation.PSObject] does not contain a method named 'op_Addition'.
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+PS>./get-roleassignments.ps1
+Transcript started, output file is .\logs\role-assignments.log
+Locating and loading required functions... Please wait
+Functions have been found. Continuing...
+Checking Az CLI and PowerShell prereqs... Please wait
+Azure PowerShell module is installed. Continuing...
+
+You are connected to Azure Tenant: Subwave. Do you want to change?
+
+Prereqs complete. Starting...
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Get role assignments for a Subscription
+***************************************
+
+You are connected to Subscription:
+dlineyAzureTraining
+
+To search
+dlineyAzureTraining
+ press
+ enter
+To search
+all
+ Subscriptions, enter
+ 'all'
+
+If you would like to search a different subscription, exit to main menu by entering
+ '0'
+ and select option
+ 9
+
+To exit back to main menu enter
+ '0'
+
+WARNING: Unable to acquire token for tenant 'ace2b027-9ecd-4244-aad8-0422e2c8f6f8' with error 'Authentication failed against tenant ace2b027-9ecd-4244-aad8-0422e2c8f6f8. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId ace2b027-9ecd-4244-aad8-0422e2c8f6f8'.'
+WARNING: Unable to acquire token for tenant 'b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6' with error 'Authentication failed against tenant b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter WARNING: Unable to acquire token for tenant 'ace2b0You have 3 subscriptions in your tenant (not including subscriptions you do not have access to)
+There are 4 users in the CSV file
+There are 0 groups in the CSV file
+There are 201 service principals in the CSV file
+There are 205 total entries in the CSV file
+.\outputs\all-sub-05052025213743-expanded.csv
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+PS>./get-roleassignments.ps1
+Transcript started, output file is .\logs\role-assignments.log
+Locating and loading required functions... Please wait
+Functions have been found. Continuing...
+Checking Az CLI and PowerShell prereqs... Please wait
+Azure PowerShell module is installed. Continuing...
+
+You are connected to Azure Tenant: Subwave. Do you want to change?
+
+Prereqs complete. Starting...
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Get role assignments for a Subscription
+***************************************
+
+You are connected to Subscription:
+dlineyAzureTraining
+
+To search
+dlineyAzureTraining
+ press
+ enter
+To search
+all
+ Subscriptions, enter
+ 'all'
+
+If you would like to search a different subscription, exit to main menu by entering
+ '0'
+ and select option
+ 9
+
+To exit back to main menu enter
+ '0'
+
+WARNING: Unable to acquire token for tenant 'ace2b027-9ecd-4244-aad8-0422e2c8f6f8' with error 'Authentication failed against tenant ace2b027-9ecd-4244-aad8-0422e2c8f6f8. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId ace2b027-9ecd-4244-aad8-0422e2c8f6f8'.'
+WARNING: Unable to acquire token for tenant 'b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6' with error 'Authentication failed against tenant b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6'.'
+You have 3 subscriptions in your tenant (not including subscriptions you do not have access to)
+There are 4 users in the CSV file
+There are 0 groups in the CSV file
+There are 201 service principals in the CSV file
+There are 205 total entries in the CSV file
+.\outputs\all-sub-05052025213827-expanded.csv
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+PS>./get-roleassignments.ps1
+Transcript started, output file is .\logs\role-assignments.log
+Locating and loading required functions... Please wait
+Functions have been found. Continuing...
+Checking Az CLI and PowerShell prereqs... Please wait
+Azure PowerShell module is installed. Continuing...
+
+You are connected to Azure Tenant: Subwave. Do you want to change?
+
+Prereqs complete. Starting...
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Get role assignments for a Subscription
+***************************************
+
+You are connected to Subscription:
+dlineyAzureTraining
+
+To search
+dlineyAzureTraining
+ press
+ enter
+To search
+all
+ Subscriptions, enter
+ 'all'
+
+If you would like to search a different subscription, exit to main menu by entering
+ '0'
+ and select option
+ 9
+
+To exit back to main menu enter
+ '0'
+
+WARNING: Unable to acquire token for tenant 'ace2b027-9ecd-4244-aad8-0422e2c8f6f8' with error 'Authentication failed against tenant ace2b027-9ecd-4244-aad8-0422e2c8f6f8. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId ace2b027-9ecd-4244-aad8-0422e2c8f6f8'.'
+WARNING: Unable to acquire token for tenant 'b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6' with error 'Authentication failed against tenant b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId b8f18b6c-e8fb-469c-8504-a62a0a0e1bd6'.'
+You have 3 subscriptions in your tenant (not including subscriptions you do not have access to)
+There are 4 users in the CSV file
+There are 0 groups in the CSV file
+There are 201 service principals in the CSV file
+There are 205 total entries in the CSV file
+.\outputs\all-sub-05052025214010-expanded.csv
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+                                       ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+                                       ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+                                       ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B
+                                       ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Subwave
+ and subscription:
+dlineyAzureTraining
+Exiting...
+]633;D;0]633;A]633;P;Cwd=/Users/darylliney/Documents/get-azroleassignmentPS /Users/darylliney/Documents/get-azroleassignment> ]633;B

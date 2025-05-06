@@ -288,7 +288,8 @@ function get-all-sub {
     # Set count variable
     $subCount = $subscriptions.Count
     $progressCounter = 0
-    write-host "You have $subCount subscriptions in your tenant" -ForegroundColor Yellow
+    clear-host
+    write-host "You have $subCount subscriptions in your tenant (not including subscriptions you do not have access to)" -ForegroundColor Yellow
 
     # Create a unique filename for the CSV
     $prepend = "all-sub"
@@ -313,6 +314,105 @@ function get-all-sub {
         $subRoleAssignments | Select-Object -Property DisplayName, ObjectId, ObjectType, RoleDefinitionName, Scope | Export-Csv -Path $csvPath -append -NoTypeInformation
 
     }
+    expand-groups -csvPath $csvPath
+}
+
+function expand-groups {
+    param (
+        [string]$csvPath
+    )
+
+    # Import the CSV file
+    $csvData = Import-Csv -Path $csvPath
+
+    # Initialize a counter for progress tracking
+    $progressCounter = 0
+    $grpCount = ($csvData | Where-Object { $_.ObjectType -eq "Group" }).Count
+
+    # Initialize an array to store expanded data
+    $expandedData = @()
+
+    clear-host
+
+    # Iterate through each row in the CSV data
+    foreach ($row in $csvData) {
+        if ($row.ObjectType -eq "Group") {
+            $progressCounter++
+
+            # Get group friendly name and prepend 'Expanded group' to it for later output
+            
+            $groupName = "Expanded group $((get-azadgroup -ObjectId $row.ObjectId).DisplayName)"
+
+            # Show progress
+            Write-Progress -Activity "Locating and expanding groups" -Status "Processing line item $($progressCounter) of $($grpCount)" -PercentComplete (($progressCounter / $grpCount) * 100)
+            
+            # Get the group members
+            $groupMembers = Get-AzADGroupMember -GroupObjectId $row.ObjectId
+
+            # Iterate through each member and create a new row for each
+            foreach ($member in $groupMembers) {
+                $expandedRow = $row.PSObject.Copy()
+                $expandedRow.DisplayName = $member.DisplayName
+                $expandedRow.ObjectId = $member.Id
+                $expandedRow.ObjectType = $groupName
+
+                # Add the expanded row to the array
+                $expandedData += $expandedRow
+            }
+        } else {
+            # If not a group, just add the original row to the array
+            $expandedData += $row
+        }
+    }
+
+    # Export the expanded data to a new CSV file
+    $outputPath = $($csvPath).Replace(".csv", "-expanded.csv")
+    $expandedData | Export-Csv -Path $outputPath -NoTypeInformation
+    
+    generate-report -csvPath $outputPath
+    return $outputPath
+    
+}
+
+function generate-report {
+    param (
+        [string]$csvPath
+    )
+
+    # Initialize arrays
+    $userList = @()
+    $groupList = @()
+    $spnList = @()
+    
+    # Import the CSV file
+    $csvData = import-csv -path $csvPath
+
+    # Loops through the CSV data
+    foreach ($row in $csvData) {
+        
+        # Check if the ObjectType is "User"
+        if ($row.ObjectType -eq "User") {
+            # Get the role assignments for the user or service principal
+            $userList += $row
+
+            # Export the role assignments to a CSV file
+            #$roleAssignments | Select-Object -Property DisplayName, ObjectType, RoleDefinitionName, Scope | Export-Csv -Path ".\outputs\$($row.DisplayName)-role-assignments.csv" -NoTypeInformation
+        }
+        if ($row.ObjectType -eq "Group" -or $row.ObjectType -like "Expanded group *") {
+            # Get the role assignments for the user or service principal
+            $groupList += $row
+        }
+        if ($row.ObjectType -eq "ServicePrincipal") {
+            # Get the role assignments for the user or service principal
+            $spnList += $row
+        }
+    }
+
+    write-host "There are $($userList.Count) users in the CSV file" -ForegroundColor Yellow
+    write-host "There are $($groupList.Count) groups in the CSV file" -ForegroundColor Yellow
+    write-host "There are $($spnList.Count) service principals in the CSV file" -ForegroundColor Yellow
+    write-host "There are $($csvData.Count) total entries in the CSV file" -ForegroundColor Yellow
+    pause
 }
 
 function get-web-export {
