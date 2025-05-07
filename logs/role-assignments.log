@@ -3452,3 +3452,47 @@ You are connected to tenant:
 Marshall Motor Group Ltd
  and subscription:
 ALZ - State
+Exiting...
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cDaryl Liney\x5cOneDrive - Subwave\x5cWork\x5cget-azroleassignment Daryl Liney   get-azroleassignment   extended-group-search-fun ≡   ]0;pwsh in get-azroleassignment 7                                                                                                                                                                  in pwsh at 12:50:198]633;B
+PS>.\get-roleassignments.ps1
+Transcript started, output file is .\logs\role-assignments.log
+Locating and loading required functions... Please wait
+Functions have been found. Continuing...
+Checking Az CLI and PowerShell prereqs... Please wait
+Azure PowerShell module is installed. Continuing...
+
+You are connected to Azure Tenant: Marshall Motor Group Ltd. Do you want to change?
+
+Prereqs complete. Starting...
+########################################################################################################################
+##                                                                                                                    ##
+##
+Get Role Assignments
+                                                                                              ##
+##
+********************
+                                                                                              ##
+##                                                                                                                    ##
+##
+1.
+Get Role Assignments for a Subscription
+                                                                        ##
+##
+2.
+Get Role Assignments for a Management Group
+                                                                    ##
+##                                                                                                                    ##
+##
+9.
+Choose new Tenant and/or Subscription
+                                                                          ##
+##
+0.
+Exit
+                                                                                                           ##
+##                                                                                                                    ##
+########################################################################################################################
+You are connected to tenant:
+Marshall Motor Group Ltd
+ and subscription:
+ALZ - State

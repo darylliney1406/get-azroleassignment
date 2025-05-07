@@ -1,2 +1,3 @@
 temp.ps1
 *.csv
+./logs/*.*
